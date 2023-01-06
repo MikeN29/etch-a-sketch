@@ -1,10 +1,17 @@
-const container = document.querySelector('#container');
 
-const gridDiv = document.createElement('div');
 
-gridDiv.classList.add('gridDiv');
+for (let i = 0; i < 256; i++) {
 
-gridDiv.textContent = 'This is the glorious text-content!';
+    const container = document.querySelector('#container');
 
-container.appendChild(gridDiv);
+    const gridDiv = document.createElement('div');
+    
+    gridDiv.classList.add('gridDiv');
+    
+    container.appendChild(gridDiv);
+
+}
+
+
+
 
