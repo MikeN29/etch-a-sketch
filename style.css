@@ -1,8 +1,11 @@
 #container {
-    height: 350px;
-    width: 358px;
+    height: 320px;
+    width: 328px;
     display: flex;
     flex-wrap: wrap;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
 }
 
 
@@ -10,11 +13,9 @@
 .gridDiv {
     height: 20px;
     width: 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
+
 }
 
-.gridDiv:hover {
+/*.gridDiv:hover {
     background-color: black;
-}
+}*/
