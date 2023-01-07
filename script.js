@@ -18,7 +18,7 @@ for (let i = 0; i < 256; i++) {
 let cell = document.getElementById("gridDiv");
 cell.addEventListener("mouseenter", (event) => {
     // highlight the mouseenter target
-    event.cell.style.backgroundColor = "purple";
+    event.cell.className = "gridDivHover";
     console.log('hello mouse over');
 
 }, false); 
