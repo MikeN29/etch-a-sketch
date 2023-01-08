@@ -12,9 +12,21 @@ for (let i = 0; i < 256; i++) {
 
     container.appendChild(gridDiv);
 
-
+    gridDiv.addEventListener('mouseover', changeGridDivColour)
 
 }
+
+function changeGridDivColour(e) {
+    let colour = `rgb(${[0, 0, 0]}`
+    Object.assign(e.target.style, {
+      backgroundColor : colour,
+    });
+  }
+
+  function restartGame() {
+    
+  }
+
 
 /*
 document.querySelector("gridDiv").addEventListener("mouseover", function () {
@@ -36,34 +48,46 @@ for (var i = 0; i < cells.length; i++) {
 
 
 
+/*
+var element = document.getElementById('container');
+var children = element.children;
+for(var i=0; i<children.length; i++){
+    var child = children[i];
+    child.style.background = 'black';
+}*/
+
+/*
+
+
+var cells = document.getElementsByClassName('gridDiv');
+
+for (var i = 0; i < cells.length; i++) {
+    cells[i].addEventListener("mouseenter", (event) => {
+        console.log('hello mouse over');
+        document.getElementById("gridDiv").style.background = 'black';
+    
+    }, false); 
+
+}
+*/
 
 
 
+/*
 
+//below is working for the first gridDiv
 
 let cell = document.getElementById("gridDiv");
 
 
 cell.addEventListener("mouseenter", (event) => {
-    // highlight the mouseenter target
-    //event.cell.className = "gridDivHover";
     console.log('hello mouse over');
-
-    //event.cell.setAttribute("id", "gridDivHover");
-    document.getElementById("gridDiv").style.background = 'black'
-
-    
-    
+    document.getElementById("gridDiv").style.background = 'black';
 
 }, false); 
 
-console.log(cell)
 
 
-//cell.addEventListener("mouseout", func1, false);
-
-
-
-
+*/
 
 
