@@ -17,15 +17,31 @@ for (let i = 0; i < 256; i++) {
 }
 
 function changeGridDivColour(e) {
-    let colour = `rgb(${[0, 0, 0]}`
-    Object.assign(e.target.style, {
-      backgroundColor : colour,
-    });
+    e.target.style.background = "rgb(0, 0, 0)";
   }
 
-  function restartGame() {
-    
-  }
+
+
+
+
+  function clearPad() {
+    var element = document.querySelectorAll(".gridDiv");
+    element.forEach(function (element, index) {
+        console.log(element); // The element
+        console.log(index); // The index in the NodeList
+        element.style.backgroundColor = "rgb(255,255,255)";
+    });
+} 
+
+
+
+
+
+    //e.target.style.background = "rgb(255,255,255)";
+
+
+  
+
 
 
 /*
@@ -73,6 +89,8 @@ for (var i = 0; i < cells.length; i++) {
 
 
 
+
+
 /*
 
 //below is working for the first gridDiv
@@ -86,8 +104,17 @@ cell.addEventListener("mouseenter", (event) => {
 
 }, false); 
 
+////////the below works for all grids
+
+function changeGridDivColour(e) {
+    let colour = `rgb(${[0, 0, 0]}`
+    Object.assign(e.target.style, {
+      backgroundColor : colour,
+    });
+  }
 
 
 */
+
 
 
