@@ -1,3 +1,13 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 #container {
     height: 320px;
     width: 320px;
@@ -6,6 +16,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    align-content: stretch;
 }
 
 
@@ -13,6 +24,9 @@
 .gridDiv {
     height: 20px;
     width: 20px;
+    flex-grow: 1;
+    flex-shrink: 3;
+    display: inline-block;
 
 }
 
