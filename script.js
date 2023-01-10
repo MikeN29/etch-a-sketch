@@ -51,10 +51,6 @@ for (let i = 0; i < gridSize; i++) {
         elements[j].style.width=(squareSize+"px");
         elements[j].style.height=(squareSize+"px");
     }
-
-    //document.getElementById("gridDiv").style.width = squareSize;
-    //document.getElementById("gridDiv").style.height = "`${squareSize}`px";
-
 }
 }
 
@@ -72,8 +68,13 @@ function clearPad() {
     element.forEach(function (element, index) {
         console.log(element); // The element
         console.log(index); // The index in the NodeList
-        element.style.backgroundColor = "rgb(255,255,255)";
-        let gridSize = 0;
+        //element.style.backgroundColor = "rgb(255,255,255)";
+        const container = document.querySelector('#container');
+
+        const gridDiv = document.getElementById('gridDiv');
+           
+        container.removeChild(gridDiv);
+        
     });
 } 
 
