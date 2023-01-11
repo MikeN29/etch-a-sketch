@@ -12,7 +12,6 @@ function changePadSize() {
 
             document.getElementById("choosePadSize").disabled = true;
 
-       
         }
 
 }
@@ -42,31 +41,32 @@ function changeGridSize(squaresPerside, gridSize) {
     }
 }
 
+let colourCount = 1;
 
-
-
-
-
-
-
-
-
-
-
+function increaseColourCount() {
+    colourCount += 1;
+}
 
 
 
 function changeGridDivColour(e) {
-    e.target.style.background = "rgb(0, 0, 0)";
-    
+    if (colourCount % 2 == 1) {
+        e.target.style.background = "rgb(0, 0, 0)";
+    } else {
+        let num = Math.round(0xffffff * Math.random());
+        let r = num >> 16;
+        let g = num >> 8 & 255;
+        let b = num & 255;
+        let colour = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+        e.target.style.background = colour;
+    }    
   }
 
 
 function clearPad() {
     var element = document.querySelectorAll(".gridDiv");
     element.forEach(function (element, index) {
-        console.log(element);
-        console.log(index);
+
         const container = document.querySelector('#container');
 
         const gridDiv = document.getElementById('gridDiv');
@@ -74,7 +74,6 @@ function clearPad() {
         container.removeChild(gridDiv);
 
         document.getElementById("choosePadSize").disabled = false;
-
         
     });
 } 
@@ -84,7 +83,7 @@ function clearPad() {
 
 /* 1. sort issue of change pad size button - disable after use? once pad is clear bring it back? DONE
    2. style webpage
-   3. add colour option
+   3. add colour option DONE
 
 */
 

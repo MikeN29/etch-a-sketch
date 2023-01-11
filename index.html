@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <title>Etch-a-Sketch</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
         <div id="menuButtons">
             <button id="choosePadSize" onclick="changePadSize()">Choose Pad Size</button>
 
-            <button>Change Colour</button>
+            <button onclick="increaseColourCount()">Change Colour</button>
            
             <button id="clearButton" onclick="clearPad()">Clear Pad</button>
             
