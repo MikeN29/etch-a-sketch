@@ -1,22 +1,19 @@
 
-
-
-
 let gridSize = 0;
 
 function changePadSize() {
     let squaresPerside = prompt("Please enter number of Squares per side", "16");
+        if (squaresPerside > 100) {
+            alert('Please choose a number below 100')
+        } else {
+            let gridSize = squaresPerside * squaresPerside;
 
-    if (squaresPerside > 100) {
-        alert('Please choose a number below 100')
-    } else {
+            changeGridSize(squaresPerside, gridSize)
 
-        let gridSize = squaresPerside * squaresPerside;
+            document.getElementById("choosePadSize").disabled = true;
 
-        changeGridSize(squaresPerside, gridSize)
        
-
-    }
+        }
 
 }
 
@@ -47,10 +44,21 @@ function changeGridSize(squaresPerside, gridSize) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 function changeGridDivColour(e) {
     e.target.style.background = "rgb(0, 0, 0)";
     
-
   }
 
 
@@ -59,12 +67,14 @@ function clearPad() {
     element.forEach(function (element, index) {
         console.log(element);
         console.log(index);
-        //element.style.backgroundColor = "rgb(255,255,255)";
         const container = document.querySelector('#container');
 
         const gridDiv = document.getElementById('gridDiv');
            
         container.removeChild(gridDiv);
+
+        document.getElementById("choosePadSize").disabled = false;
+
         
     });
 } 
@@ -72,21 +82,10 @@ function clearPad() {
 
 
 
-//store user pad size numbers in a varable
-//does this need to be square? 1 number from the user?
-//attempt this with css grids, passing through information to the grid via user input
+/* 1. sort issue of change pad size button - disable after use? once pad is clear bring it back? DONE
+   2. style webpage
+   3. add colour option
+
+*/
 
 
-
-
-
-
-
-
-
-
-
-    //e.target.style.background = "rgb(255,255,255)";
-
-
-  
